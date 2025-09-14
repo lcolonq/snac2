@@ -19,28 +19,38 @@
 
 const char *public_address = "https:/" "/www.w3.org/ns/activitystreams#Public";
 
-/* susie.png */
+/* mrgreen.png */
 
-const char *susie =
-    "iVBORw0KGgoAAAANSUhEUgAAAEAAAABAAQAAAAC"
-    "CEkxzAAAAUUlEQVQoz43R0QkAMQwCUDdw/y3dwE"
-    "vsvzlL4X1IoQkAisKmwfAFT3RgJHbQezpSRoXEq"
-    "eqCL9BJBf7h3QbOCCxV5EVWMEMwG7K1/WODtlvx"
-    "AYTtEsDU9F34AAAAAElFTkSuQmCC";
+const char *mrgreen =
+    "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ"
+    "bWFnZVJlYWR5ccllPAAAAURQTFRFAFUAAFkBAFsBAKITAKMTAKcU////AFUAAGUEAJ0SAKgVAFUA"
+    "AFoBAKMTAKcUAFUAAHAHAJoRAKoVAFUAAHwKAJUQAKoVAFUAAGIEAJ8SAKcUAFUAAIQMAJAPAKoV"
+    "BWAGB6gaAFUAAIoNAKoVHncfKr08FYoeHbEtMqQ7PKJBR89XU9NjNblEQsxSU69UcN19RctVTNRd"
+    "bchukOqbTtZeedJ5nvCoBIwVC5McDJQdEZQiEZkiEpUjGKApHKMtHqMvIZ8xIakyIqozJKs1LKk8"
+    "L7A9L7dAOr1KPr5OPsBNQbtMQ7pOS9FcTtJeT9JgUdNhUdVhVdZlWcdnWctnXMxqX8VsX95uYMll"
+    "YNhvY9lyZNxydOOCdbd9h8qPjuqameqjoeyqo+ysu7u7vdLAvd7BvsK+yNzK0NDQ29vb3d3d8vLy"
+    "/f39/WiaawAAADd0Uk5TAAAAAAAAAAoKCgolJSUlTk5OTpmZmZmoqKiovLy8vL29ysrK2dna2uvr"
+    "6+vw8PDw+vr6+v7+/tDWDIMAAADZSURBVBgZVcE9T8NADABQ++xzrk1SoYJADAysDEiI//8TGBmY"
+    "KrVIiCFAoLnehxMjRt5DQvSBg69JUzUjBlh17Zpp1jgdIwDDats+IqKZPYlFoLDZPMT9Z7Mf5GZY"
+    "qlG/vXfvV/3bdTf0F1+5MkupwWPvLZxMGOi8E2RVrpXmlMrEnkbHjACmupAHLsp3kpvc5KY8awGX"
+    "VIoTJ05cEU3gtLSHbH/yoS0KBJguh4bM4mvYjUejxfx0+z18jPXs5TQmh87WXb9mmjX+HCMyA0ya"
+    "OEhJmjICoMB/v65LdZ0LnIAYAAAAAElFTkSuQmCC";
 
-const char *susie_cool =
-    "iVBORw0KGgoAAAANSUhEUgAAAEAAAABAAQAAAAC"
-    "CEkxzAAAAV0lEQVQoz43RwQ3AMAwCQDZg/y3ZgN"
-    "qo3+JaedwDOUQBQFHYaTB8wTM6sGl2cMPu+DFzn"
-    "+ZcgN7wF7ZVihXkfSlWIVzIA6dbQzaygllpNuTX"
-    "ZmmFNlvxADX1+o0cUPMbAAAAAElFTkSuQmCC";
-
-const char *susie_muertos =
-    "iVBORw0KGgoAAAANSUhEUgAAAEAAAABAAQAAAAC"
-    "CEkxzAAAAV0lEQVQoz4XQsQ0AMQxCUW/A/lv+DT"
-    "ic6zGRolekIMyMELNp8PiCEw6Q4w4NoAt53IH5m"
-    "xXksrZYgZwJrIox+Z8vJAfe2lCxG6AK7eKkWcEb"
-    "QHbF617xAQatAAD7jJHUAAAAAElFTkSuQmCC";
+const char *mrblue =
+    "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IArs4c6QAAAURQTFRFACNV"
+    "ACRZACVbADCiADGjADKn////ACNVACZlAC+dADGoACNVACVaADGjADKnACNVAChwAC+aADKqACNV"
+    "ACp8AC6VADKqACNVACViADCfADKnACNVACuEAC2QADKqBSpgBzeoACNVAC2KADKqHkJ3KlW9FT2K"
+    "HUuxMlikPGKiR3DPU3jTNV25QmvMU3ivcJDdRW3LTHTUbZLIkKvqTnfWeZ7SnrbwBCyMCzOTDDSU"
+    "ETeUETmZEjiVGECgHEOjHkSjIUWfIUmpIkqqJEurLFCpL1ewL1e3OmG9PmO+PmXAQWm7Q2q6S3LR"
+    "TnXST3XSUXfTUXjVVXvWWXnHWXvLXH3MX33FX4XeYIfJYIPYY4XZZIjcdJTjdYm3h5vKjqjqmbHq"
+    "obfso7jsu7u7vcPSvcfevsDCyM7c0NDQ29vb3d3d8vLy/f392GHOZgAAAGx0Uk5TAAAAAAAAAAoK"
+    "CgolJSUlTk5OTpmZmZmoqKiovLy8vL29ysrK2dna2uvr6+vw8PDw+vr6+v7+/v//////////////"
+    "////////////////////////////////////////////////////////7QzqUgAAAPVJREFUGJVd"
+    "ylVbAlEUheFNbbo7RaSkSwGVGgmBA8OIIt0wxP+/98il6+57nwUoEksUBovnwWMxKCRiEVDQOALJ"
+    "7HM2GXBobqD2Rper9Wa9Wka9agpye2T2+jWsvL18ziJ2OaA+NJp+06I2HYX0gOb4gGuNJx+TcYsb"
+    "xM2A7jThen2WZfs90ky7AX05Qki3wTC1UjGf8wG6Us1OfX7cnrfnXSHlAjTF2tU9fzldT9dFOWYC"
+    "1AXLCxr8hd9X20EdoMxW2NH74Tivd8I2GaBQlS+Wasx7o/vzeKcSUhAorf5E5imT8FuVghuAVGt0"
+    "3juNWin8wb/9Ak1jLzm6XnY9AAAAAElFTkSuQmCC";
 
 
 const char *default_avatar_base64(void)
@@ -48,15 +58,12 @@ const char *default_avatar_base64(void)
 {
     time_t t = time(NULL);
     struct tm tm;
-    const char *p = susie;
+    const char *p = mrgreen;
 
     gmtime_r(&t, &tm);
 
     if (tm.tm_mon == 10 && tm.tm_mday == 2)
-        p = susie_muertos;
-    else
-    if (tm.tm_wday == 0 || tm.tm_wday == 6)
-        p = susie_cool;
+        p = mrblue;
 
     return p;
 }
@@ -1575,7 +1582,7 @@ xs_dict *msg_actor(snac *snac)
     p = xs_dict_get(snac->config, "avatar");
 
     if (*p == '\0')
-        avtr = xs_fmt("%s/susie.png", srv_baseurl);
+        avtr = xs_fmt("%s/mrgreen.png", srv_baseurl);
     else
         avtr = xs_dup(p);
 

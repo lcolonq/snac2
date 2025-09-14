@@ -606,7 +606,7 @@ xs_dict *mastoapi_account(snac *logged, const xs_dict *actor)
     }
 
     if (avatar == NULL)
-        avatar = xs_fmt("%s/susie.png", srv_baseurl);
+        avatar = xs_fmt("%s/mrgreen.png", srv_baseurl);
 
     acct = xs_dict_append(acct, "avatar", avatar);
     acct = xs_dict_append(acct, "avatar_static", avatar);
@@ -1253,7 +1253,7 @@ void credentials_get(char **body, char **ctype, int *status, snac snac)
     const char *av = xs_dict_get(snac.config, "avatar");
 
     if (xs_is_null(av) || *av == '\0')
-        avatar = xs_fmt("%s/susie.png", srv_baseurl);
+        avatar = xs_fmt("%s/mrgreen.png", srv_baseurl);
     else
         avatar = xs_dup(av);
 
@@ -2248,8 +2248,8 @@ int mastoapi_get_handler(const xs_dict *req, const char *q_path,
 
         ins = xs_dict_append(ins, "short_description", sdesc && *sdesc ? sdesc : host);
 
-        xs *susie = xs_fmt("%s/susie.png", srv_baseurl);
-        ins = xs_dict_append(ins, "thumbnail", susie);
+        xs *mrgreen = xs_fmt("%s/mrgreen.png", srv_baseurl);
+        ins = xs_dict_append(ins, "thumbnail", mrgreen);
 
         const char *v = xs_dict_get(srv_config, "admin_email");
         if (xs_is_null(v) || *v == '\0')

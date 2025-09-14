@@ -273,7 +273,7 @@ int server_get_handler(xs_dict *req, const char *q_path,
             status = HTTP_STATUS_OK;
     }
     else
-    if (strcmp(q_path, "/susie.png") == 0 || strcmp(q_path, "/favicon.ico") == 0 ) {
+    if (strcmp(q_path, "/mrgreen.png") == 0 || strcmp(q_path, "/favicon.ico") == 0 ) {
         status = HTTP_STATUS_OK;
         *body  = xs_base64_dec(default_avatar_base64(), b_size);
         *ctype = "image/png";

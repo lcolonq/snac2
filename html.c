@@ -837,7 +837,7 @@ xs_html *html_user_head(snac *user, const char *desc, const char *url)
 
     if (avatar == NULL || *avatar == '\0') {
         xs_free(avatar);
-        avatar = xs_fmt("%s/susie.png", srv_baseurl);
+        avatar = xs_fmt("%s/mrgreen.png", srv_baseurl);
     }
 
     /* create a description field */
