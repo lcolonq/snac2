@@ -32,6 +32,9 @@
             };
           };
           config = lib.mkIf cfg.enable {
+            environment.systemPackages = [
+              snac2
+            ];
             systemd.services."colonq.snac2" = {
               wantedBy = ["network-online.target"];
               serviceConfig = {
