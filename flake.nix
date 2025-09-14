@@ -38,21 +38,21 @@
             environment.systemPackages = [
               snac2
             ];
-            systemd.services."colonq.snac2" = {
-              wantedBy = ["network-online.target"];
-              serviceConfig = {
-                Restart = "on-failure";
-                ExecStart = "${snac2}/bin/snac httpd ${cfg.dir}";
-                User = "snac2";
-                RuntimeDirectory = "colonq.fig-bus-sexp";
-                RuntimeDirectoryMode = "0755";
-                StateDirectory = "colonq.fig-bus-sexp";
-                StateDirectoryMode = "0700";
-                CacheDirectory = "colonq.fig-bus-sexp";
-                CacheDirectoryMode = "0750";
-              };
-            };
-          };
+          #   systemd.services."colonq.snac2" = {
+          #     wantedBy = ["network-online.target"];
+          #     serviceConfig = {
+          #       Restart = "on-failure";
+          #       ExecStart = "${snac2}/bin/snac httpd ${cfg.dir}";
+          #       User = "snac2";
+          #       RuntimeDirectory = "colonq.fig-bus-sexp";
+          #       RuntimeDirectoryMode = "0755";
+          #       StateDirectory = "colonq.fig-bus-sexp";
+          #       StateDirectoryMode = "0700";
+          #       CacheDirectory = "colonq.fig-bus-sexp";
+          #       CacheDirectoryMode = "0750";
+          #     };
+          #   };
+          # };
         };
     in {
       packages.x86_64-linux = {
