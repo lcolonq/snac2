@@ -34,7 +34,9 @@
           config = lib.mkIf cfg.enable {
             users.users.snac2 = {
               isSystemUser = true;
+              group = "snac2";
             };
+            users.groups.snac2 = {};
             environment.systemPackages = [
               snac2
             ];
