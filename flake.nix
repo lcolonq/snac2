@@ -53,5 +53,8 @@
         default = snac2;
         inherit snac2;
       };
+      nixosModules = {
+        snac2 = snac2Module;
+      };
     };
 }
