@@ -32,6 +32,9 @@
             };
           };
           config = lib.mkIf cfg.enable {
+            users.users.snac2 = {
+              isSystemUser = true;
+            };
             environment.systemPackages = [
               snac2
             ];
@@ -40,7 +43,7 @@
               serviceConfig = {
                 Restart = "on-failure";
                 ExecStart = "${snac2}/bin/snac httpd ${cfg.dir}";
-                DynamicUser = "yes";
+                User = "snac2";
                 RuntimeDirectory = "colonq.fig-bus-sexp";
                 RuntimeDirectoryMode = "0755";
                 StateDirectory = "colonq.fig-bus-sexp";
